@@ -82,6 +82,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log('task 3', reviews[5].feedback);
+
 
 
 
@@ -90,8 +92,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
+console.log('task 4', reviews[7].feedback)
 
-//
 
 
 
@@ -105,8 +108,11 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 function addReview(array, name, rating, feedback){
-  //array.push()
+  array.push({name, rating, feedback});
+  return array
 }
+
+console.log(addReview(reviews, 'Stella', 4, "it was okay"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -120,9 +126,10 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(array, number) {
-  /*Your code here*/
+      return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`
 }
 
+console.log(getReviewByIndex(reviews,3))
 
   
 
