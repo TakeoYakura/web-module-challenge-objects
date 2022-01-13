@@ -54,12 +54,13 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
-//the method goes here called 
-discount: function(){
-  //this.price *discount
-}
-
+  discount: function(occupation){
+    if(occupation === 'teacher' || occupation === 'student'){
+      return this.price - (this.price*.25) ;
+    } else {
+      return this.price - (this.price*.1) ;
+    }
+  }
 }
 
 
